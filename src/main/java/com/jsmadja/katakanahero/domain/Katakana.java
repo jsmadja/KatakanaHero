@@ -1,5 +1,12 @@
 package com.jsmadja.katakanahero.domain;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
+import static java.util.Arrays.asList;
+import static java.util.Collections.unmodifiableList;
+
 public enum Katakana {
 
     ア("a"),     イ("i"),    ウ("u"),     エ("e"),     オ("o"),
@@ -31,5 +38,13 @@ public enum Katakana {
 
     public boolean isEqualTo(String s) {
         return syllabe.equalsIgnoreCase(s);
+    }
+
+    public static int count() {
+        return Katakana.values().length;
+    }
+
+    public static Collection<Katakana> list() {
+        return unmodifiableList(asList(Katakana.values()));
     }
 }
