@@ -6,7 +6,7 @@ import static org.fest.assertions.Assertions.assertThat;
 
 public class GameSessionTest {
 
-    private GameSession gameSession = new GameSession();
+    private GameSession gameSession = new GameSession(new Player("test"));
 
     @Test
     public void doit_renvoyer_une_question_katakana() {

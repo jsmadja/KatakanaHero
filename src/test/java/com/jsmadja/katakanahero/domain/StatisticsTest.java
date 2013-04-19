@@ -5,9 +5,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.List;
 
-import static com.jsmadja.katakanahero.domain.Katakana.ア;
-import static com.jsmadja.katakanahero.domain.Katakana.イ;
-import static com.jsmadja.katakanahero.domain.Katakana.カ;
+import static com.jsmadja.katakanahero.domain.Katakana.*;
 import static org.fest.assertions.Assertions.assertThat;
 
 public class StatisticsTest {

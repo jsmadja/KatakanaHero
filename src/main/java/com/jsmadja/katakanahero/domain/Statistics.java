@@ -27,7 +27,7 @@ public class Statistics {
 
     private void incrementScoreOf(Katakana katakana, Map<Katakana, Integer> scores) {
         Integer score = scores.get(katakana);
-        if(score == null) {
+        if (score == null) {
             scores.put(katakana, 1);
         } else {
             scores.put(katakana, score + 1);
@@ -36,14 +36,14 @@ public class Statistics {
 
     private int getScoreOf(Katakana katakana, Map<Katakana, Integer> scores) {
         Integer score = scores.get(katakana);
-        if(score == null) {
+        if (score == null) {
             return 0;
         }
         return score;
     }
 
     public List<Katakana> getKatakanasWithMostUnknownFirst() {
-        List<Katakana> katakanas = new ArrayList<Katakana>(Katakana.list());
+        List<Katakana> katakanas = new ArrayList<Katakana>(Katakana.randomList());
         Collections.sort(katakanas, sortByBadScore);
         return katakanas;
     }

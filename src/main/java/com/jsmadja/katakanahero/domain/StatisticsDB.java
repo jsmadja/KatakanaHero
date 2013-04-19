@@ -14,7 +14,7 @@ import static com.google.common.collect.Collections2.filter;
 public class StatisticsDB {
 
     public static final Charset CHARSET = Charset.forName("UTF-8");
-    
+
     private final Statistics statistics;
 
     public StatisticsDB(Statistics statistics) {

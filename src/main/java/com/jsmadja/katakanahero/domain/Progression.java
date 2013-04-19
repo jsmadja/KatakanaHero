@@ -18,6 +18,6 @@ public class Progression {
     }
 
     private int pourcentage() {
-        return (int)((currentScore / (double) maxScore) * 100);
+        return (int) ((currentScore / (double) maxScore) * 100);
     }
 }
