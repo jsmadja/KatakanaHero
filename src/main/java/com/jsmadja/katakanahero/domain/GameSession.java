@@ -91,4 +91,7 @@ public class GameSession {
         return "/tmp/katakanahero-" + player.getName() + ".db";
     }
 
+    public Katakana getCurrentKatakana() {
+        return currentKatakana;
+    }
 }
