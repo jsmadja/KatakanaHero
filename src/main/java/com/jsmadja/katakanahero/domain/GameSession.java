@@ -36,7 +36,7 @@ public class GameSession {
     }
 
     public Result input(String answer) {
-        if (currentKatakana.isEqualTo(answer)) {
+        if (currentKatakana != null && currentKatakana.isEqualTo(answer)) {
             score++;
             lastResult = OK;
             statistics.good(currentKatakana);

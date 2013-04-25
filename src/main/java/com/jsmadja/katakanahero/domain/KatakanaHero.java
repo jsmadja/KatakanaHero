@@ -1,8 +1,14 @@
 package com.jsmadja.katakanahero.domain;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class KatakanaHero {
+
+    private static final KatakanaHero INSTANCE = new KatakanaHero();
+
+    private Map<Player, GameSession> sessions = new HashMap<Player, GameSession>();
 
     public static void main(String[] args) {
         KatakanaHero katakanaHero = new KatakanaHero();
@@ -32,4 +38,16 @@ public class KatakanaHero {
         }
     }
 
+    public static KatakanaHero getInstance() {
+        return INSTANCE;
+    }
+
+    public GameSession getSessionOf(Player player) {
+        GameSession gameSession = sessions.get(player);
+        if (gameSession == null) {
+            gameSession = new GameSession(player);
+            sessions.put(player, gameSession);
+        }
+        return gameSession;
+    }
 }

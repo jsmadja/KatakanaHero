@@ -4,8 +4,10 @@ import static java.lang.String.format;
 
 public class Progression {
 
-    private final int currentScore;
-    private final int maxScore;
+    private int currentScore;
+    private int maxScore;
+
+    Progression() {}
 
     public Progression(int currentScore, int maxScore) {
         this.currentScore = currentScore;
